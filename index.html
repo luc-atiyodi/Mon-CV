@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+        .liens-contact a {
+    text-decoration: none; /* Enlève le soulignement */
+    color: #007bff;        /* Un bleu plus moderne */
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+}
+
+.liens-contact a:hover {
+    color: #0056b3;        /* Change de couleur quand on passe dessus */
+    text-decoration: underline;
+}
+        .photo-profil {
+  width: 150px;      /* Largeur fixe */
+  height: 150px;     /* Hauteur fixe */
+  border-radius: 50%; /* Rend l'image parfaitement ronde */
+  object-fit: cover;  /* Évite de déformer la photo */
+  display: block;     /* Permet de centrer l'image */
+  margin: 0 auto;    /* Centre l'image horizontalement */
+  border: 3px solid #28a745; /* Ajoute un contour de la même couleur que votre bouton */
+}
+        .mon-bouton {
+  background-color: #28a745; /* Vert */
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+        p {
+  font-size: 18px;
+  color: gray;
+}
+  h1 {
+  font-size: 30px;
+  color: darkblue;
+  border: 2px solid darkblue; /* Définit l'épaisseur, le style et la couleur */
+  padding: 10px;               /* Ajoute de l'espace entre le texte et la bordure */
+  text-align: center;         /* Centre votre nom */
+}
+  
+  h2 {
+    font-size: 20px;
+    color: green;
+  }
+</style>
+    <meta charset="UTF-8">
+    <title>Mon CV Digital</title>
+</head>
+<body>
+    <img src="ma-photo.jpg" alt="Photo de SIMYELI Luc Atiyodi" class="photo-profil">
+    <h1>SIMYELI Luc Atiyodi</h1>
+    <p><strong>Étudiant en Lettres Modernes & Secrétariat</strong></p>
+    <p>Lomé, Togo</p>
+    <div class="liens-contact">
+    <a href="mailto: slucatiyodi@gmail.com">📧 M'envoyer un email</a> | 
+    <a href="https://wa.me/22896340616" target="_blank">💬 WhatsApp</a>
+</div>
+    <hr>
+    <h2>Objectif Professionnel</h2>
+    <p>Passionné par l'administration et les nouvelles technologies, je me forme actuellement au développement web pour polyvalents mes compétences.
+    </p>
+    <h2>Compétences</h2>
+    <ul>
+        <li>Secrétariat et Bureautique</li>
+        <li>Maintenance Informatique (Logiciel & Matériel)</li>
+        <li>Rédaction de documents administratifs</li>
+        <li>Bases du Développement Web (HTML5)</li>
+        <li>Maîtrise de la suite Office</></li>
+    </ul>
+    <button class="mon-bouton" onclick="direBonjour()">Cliquez ici</button>
+
+</body>
+<script>
+  function direBonjour() {
+    alert("Merci de me contacter ! Mon email est : slucatiyodi@gmail.com");
+  }
+</script>
+</html>
