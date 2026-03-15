@@ -6,6 +6,44 @@
     <title>Portfolio - SIMYELI Luc Atiyodi</title>
     
     <style>
+        /* 1. Le Container (La boîte principale) */
+.container {
+    width: 95%;          /* Utilise presque toute la largeur sur petit écran */
+    max-width: 900px;    /* Mais ne dépasse jamais 900px sur un grand PC */
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* 2. La Magie du Responsive (Adaptation PC / Tablette) */
+@media (min-width: 768px) {
+    /* Sur PC et Tablette, on met l'en-tête de côté */
+    .header {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .photo-profil {
+        width: 180px;  /* Photo plus grande sur PC */
+        height: 180px;
+    }
+
+    /* Galerie en 3 colonnes sur PC au lieu de 2 sur mobile */
+    .galerie {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 3. Ajustement pour les très petits écrans */
+@media (max-width: 480px) {
+    h1 { font-size: 22px; }
+    .container { padding: 15px; }
+    .galerie { grid-template-columns: 1fr; } /* Une seule colonne si l'écran est minuscule */
+}
+        file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit%20user%20files/Apprentissage/index.html
         .competences-box {
     text-align: left; /* Aligne le texte à gauche */
     margin-left: 20px; /* Ajoute un petit espace à gauche pour que ce ne soit pas collé au bord */
