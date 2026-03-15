@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - SIMYELI Luc Atiyodi</title>
+    
     <style>
-        .liens-contact a {
+        .competences-box {
+    text-align: left; /* Aligne le texte à gauche */
+    margin-left: 20px; /* Ajoute un petit espace à gauche pour que ce ne soit pas collé au bord */
+    margin-right: 20px;
+}
+
+.competences-box ul {
+    list-style-type: square; /* Change les puces en petits carrés pour un look plus pro */
+    padding-left: 20px;
+}
+
+.competences-box li {
+    margin-bottom: 10px; /* Espace un peu les lignes pour plus de clarté */
+}
+                .liens-contact a {
     text-decoration: none; /* Enlève le soulignement */
     color: #007bff;        /* Un bleu plus moderne */
     font-weight: bold;
@@ -23,62 +41,169 @@
   margin: 0 auto;    /* Centre l'image horizontalement */
   border: 3px solid #28a745; /* Ajoute un contour de la même couleur que votre bouton */
 }
-        .mon-bouton {
-  background-color: #28a745; /* Vert */
-  color: white;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-top: 20px;
-}
-        p {
-  font-size: 18px;
-  color: gray;
-}
-  h1 {
-  font-size: 30px;
-  color: darkblue;
-  border: 2px solid darkblue; /* Définit l'épaisseur, le style et la couleur */
-  padding: 10px;               /* Ajoute de l'espace entre le texte et la bordure */
-  text-align: center;         /* Centre votre nom */
-}
-  
-  h2 {
-    font-size: 20px;
-    color: green;
-  }
-</style>
-    <meta charset="UTF-8">
-    <title>Mon CV Digital</title>
+        /* STYLE GLOBAL */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* EN-TÊTE */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .photo-profil {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #28a745;
+            margin-bottom: 10px;
+        }
+
+        h1 { margin: 0; color: #2c3e50; font-size: 26px; }
+        .statut { color: #28a745; font-weight: bold; margin: 5px 0; }
+        .info { font-size: 14px; color: #666; }
+
+        /* SECTIONS */
+        h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            border-left: 5px solid #28a745;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        /* JOURNAL / POSTS */
+        .post {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .post-date { font-size: 11px; color: #999; font-weight: bold; }
+        .post-title { margin: 5px 0; font-size: 18px; color: #2c3e50; }
+        .img-post { width: 100%; border-radius: 8px; margin-top: 10px; }
+
+        /* GALERIE */
+        .galerie {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .projet-card {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .projet-card img { width: 100%; border-radius: 5px; }
+
+        /* BOUTONS */
+        .btn-whatsapp {
+            display: block;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .admin-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 11px;
+            color: #ccc;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <img src="ma-photo.jpg" alt="Photo de SIMYELI Luc Atiyodi" class="photo-profil">
-    <h1>SIMYELI Luc Atiyodi</h1>
-    <p><strong>Étudiant en Lettres Modernes & Secrétariat</strong></p>
-    <p>Lomé, Togo</p>
-    <div class="liens-contact">
+
+    <div class="container">
+        <div class="header">
+            <img src="ma-photo.jpg" alt="SIMYELI Luc Atiyodi" class="photo-profil">
+            <h1>SIMYELI Luc Atiyodi</h1>
+            <p class="statut">Étudiant en Lettres Modernes & Secrétariat</p>
+            <p class="info">📍 Lomé, Togo | ✉️ slucatiyodi@gmail.com</p>
+             <div class="liens-contact">
     <a href="mailto: slucatiyodi@gmail.com">📧 M'envoyer un email</a> | 
     <a href="https://wa.me/22896340616" target="_blank">💬 WhatsApp</a>
-</div>
-    <hr>
-    <h2>Objectif Professionnel</h2>
-    <p>Passionné par l'administration et les nouvelles technologies, je me forme actuellement au développement web pour polyvalents mes compétences.
-    </p>
-    <h2>Compétences</h2>
+        </div>
+
+        <h2>À propos</h2>
+        <p>Polyvalent et passionné par les technologies, j'allie mes compétences littéraires à une expertise technique en maintenance informatique, graphisme et bientôt développement web.</p>
+        <p>Avec toute mon expertise, je me mets tout entier à votre disposition pour vous satisfaire dans les plus brefs délais selon notre accord et vos besoins</p>
+            <h2>Compétences</h2>
+<div class="competences-box">
     <ul>
-        <li>Secrétariat et Bureautique</li>
-        <li>Maintenance Informatique (Logiciel & Matériel)</li>
-        <li>Rédaction de documents administratifs</li>
-        <li>Bases du Développement Web (HTML5)</li>
-        <li>Maîtrise de la suite Office</></li>
+        <li><strong>Secrétariat :</strong> Saisie, rédaction administrative, Rédaction de CV, des lettres de Motivation, ...etc.</li>
+        <li><strong>Informatique :</strong> Maintenance PC, installation Windows, des programmes tel que Office, dépannage, installation et mis à jour des pilotes.</li>
+        <li><strong>Graphisme :</strong> Conception des affiches publicitaires,Microsoft Publisher.</li>
+        <li><strong>Langues :</strong> Français (Excellent).</li>
+        <li><strong>Image : </strong>Retouche des Photos Professionnelles, des photos d'anniversaire, des photos d'événements, et autres</strong></li>
+        <h2>Confidentialité</h2>
+        <p>En toute confiance, nous vous promettons de protéger toutes informations personnelles que vous mettrerez à notre disposition</p>
+        <p><strong>MERCI POUR LA CONFIANCE</strong></p>
     </ul>
-    <button class="mon-bouton" onclick="direBonjour()">Cliquez ici</button>
+</div>
+
+        <h2>Journal & Publications</h2>
+        <div id="feed">
+            <article class="post">
+                <span class="post-date">15 MARS 2026</span>
+                <h3 class="post-title">Mise en ligne de mon activité</h3>
+                <p>Heureux de vous présenter mon site personnel créé entièrement sur mobile. Je partagerai ici mes futurs projets et découvertes ou tout autre compétences pour vous servir.</p>
+            </article>
+
+            <article class="post">
+                <span class="post-date">12 MARS 2026</span>
+                <h3 class="post-title">Conception Graphique</h3>
+                <p>Travail sur une nouvelle affiche publicitaire avec Photoshop. Le design est un outil puissant pour la communication.</p>
+                </article>
+        </div>
+
+        <h2>Mes Réalisations récentes</h2>
+        <div class="galerie">
+            <div class="projet-card">
+                <img src="projet1.jpg" alt="Projet 1">
+                <p style="font-size: 24px;">Design Affiche</p>
+            </div>
+            <div class="projet-card">
+                <img src="projet2.jpg" alt="Projet 2">
+                <p style="font-size: 24px;">Secrétariat</p>
+            </div>
+        </div>
+
+        <a href="https://wa.me/22896340615" class="btn-whatsapp">Me contacter sur WhatsApp</a>
+
+        <a href="https://github.com/luc-atiyodi/Mon-CV/edit/main/index.html" class="admin-link">[Administration du site]</a>
+    </div>
 
 </body>
-<script>
-  function direBonjour() {
-    alert("Merci de me contacter ! Mon email est : slucatiyodi@gmail.com");
-  }
-</script>
-</html>
+    </html>
